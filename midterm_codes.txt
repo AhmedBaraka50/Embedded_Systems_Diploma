@@ -1,0 +1,264 @@
+1 
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+int func(int x);
+void main()
+{
+    int num ;
+    printf("enter a number :");
+    scanf("%d",&num);
+    func(num);
+}
+int func(int x)
+{
+    int arr[20];
+    int res =0;
+    int z=1;
+    int i =1 ;
+    int n=0 ;
+      while (x!=0)
+      {
+        z=x/10 ;
+        res =x-(z*10) ;
+        n=n+res ;
+        //arr[i-1]=res;
+        x=z ;
+        //i++ ;
+      }
+      printf("%d \n",n);
+
+}
+2
+#include <stdio.h>
+int func(int x);
+int main()
+{
+    int num ;
+    printf("enter a number :");
+    scanf("%d",&num );
+    func(num);
+}
+int func(int x)
+{
+    float res=0 ;
+    res = sqrt(x);
+    printf("%.3f",res);
+}
+3
+#include <stdio.h>
+int checkPrimeNumber(int n);
+int main()
+{
+    int n1, n2, i, flag;
+    printf("Enter two positive integers: ");
+    scanf("%d %d", &n1, &n2);
+    printf("Prime numbers between %d and %d are: ", n1, n2);
+    for(i=n1+1; i<n2; ++i)
+    {
+        flag = checkPrimeNumber(i);
+        if(flag == 1)
+            printf("%d ",i);
+    }
+    return 0;
+}
+int checkPrimeNumber(int n)
+{
+    int j, flag = 1;
+    for(j=2; j <= n/2; ++j)
+    {
+        if (n%j == 0)
+        {
+            flag =0;
+            break;
+        }
+    }
+    return flag;
+}
+4 
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+int func(int x);
+void main()
+{
+    int num ;
+    printf("enter a number :");
+    scanf("%d",&num);
+    func(num);
+}
+int func(int x)
+{
+    int arr[20];
+    int res =0;
+    int z=1;
+    int i =1 ;
+    int n ;
+      while (z!=0)
+      {
+        z=x/10 ;
+        res =x-(z*10) ;
+        arr[i-1]=res;
+        x=z ;
+        i++ ;
+      }
+      n= i ;
+    for (int i =0 ;i< n-1 ;i++ )
+    {
+           printf("%d",arr[i]);
+    }
+
+
+5 
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+int func(int x);
+void main()
+{
+    int num ;
+    printf("enter a number :");
+    scanf("%d",&num);
+    func(num);
+}
+int func(int x)
+{
+    int res =0 ,y=1 ,z =0 ;
+
+    while (y != 0)
+    {
+        res = x % 2 ;
+        if (res == 1) z++ ;
+        y = x / 2 ;
+        x= y ;
+        if (x== 0)
+            printf("%d",z);
+
+    }
+
+}
+}
+
+7 
+#include <stdio.h>
+int func (int a);
+
+void main()
+{
+    int x,y;
+    char n ;
+    printf("enter an integer :") ;
+    scanf("%d",&x);
+    func(x);
+
+}
+
+int func (int a)
+{
+    int y =0 ;
+    for (int i =1;i<=a ;i++ )
+    {
+
+        y +=i ;
+    }
+    printf(" sum = %d",y) ;
+}
+
+
+8 not general sol
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+int func(int a[]);
+void main()
+{
+    int num[5]={1,2,3,4,5} ;
+    //printf("element %d:",i+1);
+   // for (int i=0 ;i<20 ; i++)
+    //{
+    //    scanf("%d",&num[i]);
+    //}
+    func(num);
+}
+int func(int a[])
+{
+    int temp[10];
+    int j=0 ;
+    for (int i=4 ;i>=0 ; i--)
+    {
+        temp[j]= a[i];
+        j++;
+    }
+    for (int i=0 ;i<5 ;i++)
+    {
+        printf("%d",temp[i]);
+    }
+}
+
+9 
+#include <stdio.h>
+#include <string.h>
+void func(char a[]);
+void main()
+{
+    char str[20];
+    int i,j;
+    printf("enter your name :");
+    gets(str);
+    func(str);
+}
+void func(char a[])
+{
+    char x[15];
+    char y[15];
+    int i;
+    char z =" ";
+    while (!isspace(a[i]))
+    {
+        x[i]=a[i];
+        i++ ;
+    }
+    x[i]= '\0';
+    for( ++i ; i<=strlen(a) ; i++)
+    {
+        printf("%c",a[i]);
+    }
+    printf("%s\n",x);
+}
+
+
+Code for getting binary of number 
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+int func(int x);
+void main()
+{
+    int num ;
+    printf("enter a number :");
+    scanf("%d",&num);
+    func(num);
+}
+int func(int x)
+{
+    int res =0 ,y=1 ,z =0 ;
+    int i =0 ;
+    int arr [10];
+    int arr1[10];
+        do
+        {
+            res = x % 2 ;
+            arr[i]= res ;
+            i++ ;
+            y = x / 2 ;
+            x= y ;
+        }
+        while (y!=0);
+        arr[i]=0;
+
+        for (int j =i ; j>=0; j--)
+        {
+            printf("%d",arr[j]);
+        }
+}
