@@ -1,4 +1,4 @@
-Ass4 
+Ass4  except no.3
 1 
 
 #include <stdio.h>
@@ -30,3 +30,53 @@ int checkPrimeNumber(int n)
     }
     return flag;
 }
+
+2
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+int func(int a);
+void main()
+{
+    int num ,c;
+    printf("enter an positive integer :");
+    scanf("%d",&num);
+    c = func(num);
+    printf("%d",c);
+}
+int func(int a)
+{
+    if (a<=1)
+        return 1 ;
+
+    return a * func(a-1);
+}
+
+4
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+int func(int a , int b);
+void main()
+{
+    int num ,c ,pow;
+    printf("enter base number:");
+    scanf("%d",&num);
+        printf("enter power number:");
+    scanf("%d",&pow);
+    c = func(num, pow);
+    printf("%d",c);
+}
+int func(int a , int b)
+{
+    if (b < 1 )
+        return 1 ;
+    else
+    {
+        b-- ;
+        return a * func(a , b) ;
+    }
+}
+
